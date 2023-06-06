@@ -15,7 +15,7 @@
                 require $path;
                 $this->model = new $model();
             }
-        }
+        } 
     }
     
 
