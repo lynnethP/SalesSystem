@@ -16,7 +16,7 @@
                 $this->model = new $model();
             }
         } 
-    }
+    } 
     
 
 ?>
