@@ -7,7 +7,7 @@
         }
 
         public function Index(){
-            $this->view->Render($this, "index");    //Al heredar de Controllers se tiene acceso al objeto view que instancia la clase View
+            $this->view->Render($this, "index", null);    //Al heredar de Controllers se tiene acceso al objeto view que instancia la clase View
         }
     }
     
