@@ -10,6 +10,8 @@
             require VIEWS.$controller."/".$view. '.php';    //se concatena la variable $view pasada como parametro, en este caso "index" definido en IndexController
             require VIEWS.DF."footer.php";
 
+            // var_dump(VIEWS.$controller."/".$view. '.php');
+            // var_dump($controllers);
         }
 
         
