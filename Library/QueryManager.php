@@ -15,4 +15,19 @@
                 die();
             }
         }
+
+        public function SelectOne($attr, $table, $where, $param){
+            try {
+                $where = $where ?? "";  //si el where contiene un valor nulo se deja en blanco
+                $query = "SELECT ". $attr . " FROM " . $table . $where;
+                $sth = $this->pdo->prepare($query);
+                $response = $sth->fetchAll(PDO::FETCH_ASSOC);
+                $sth->execute($param);
+                return array("results" => $response);
+            } catch (\Throwable $th) {
+                return $th->getMessage();
+            }
+
+            $pdo = null;
+        }
     }

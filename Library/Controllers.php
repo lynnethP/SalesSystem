@@ -3,10 +3,12 @@
     class Controllers 
     {
         public $view;
+        public $role;
         public $model;
         
         public function __construct(){
             $this->view = new Views();  //Se crea el objeto view, se Instancia la clase Views del archivo Views.php
+            $this->role = new Roles();  
             $this->loadClassModels();
         }
 
