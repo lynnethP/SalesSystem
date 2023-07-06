@@ -31,7 +31,7 @@
                             <a href="" class="nav-link text-dark" title="Manage">Logout</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark" title="Manage">Register</a>
+                            <a href="<?php echo URL ?>User/Register" class="nav-link text-dark" title="Register">Register</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link text-dark" title="Manage">Login</a>
