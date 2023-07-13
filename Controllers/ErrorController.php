@@ -7,7 +7,7 @@
         }
 
         public function Error($url){
-            $this->view->Render($this, "error", $url);    //Al heredar de Controllers se tiene acceso al objeto view que instancia la clase View
+            $this->view->Render($this, "error", $url, null, null);    //Al heredar de Controllers se tiene acceso al objeto view que instancia la clase View
         }
     }
     

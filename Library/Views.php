@@ -2,7 +2,7 @@
 
     class Views
     {
-        public function Render($controllers, $view, $model){    //se captura el objeto $model y se pasa a la vista 
+        public function Render($controllers, $view, $modelOne, $modelTwo, $modelThree){    //se captura el objeto $model y se pasa a la vista 
             $array = explode("Controller", get_class($controllers));
             $controller = $array[0];
             // echo $controller;

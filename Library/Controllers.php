@@ -1,12 +1,13 @@
 <?php 
 
-    class Controllers 
+    class Controllers extends AnonymousClass
     {
         public $view;
         public $role;
         public $model;
         
         public function __construct(){
+            Session::star();        //No es necesario instanciar porque son metodos estaticos
             $this->view = new Views();  //Se crea el objeto view, se Instancia la clase Views del archivo Views.php
             $this->role = new Roles();  
             $this->loadClassModels();

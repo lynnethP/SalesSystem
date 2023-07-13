@@ -1,5 +1,5 @@
 <div class="container p-4">
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="AddUser" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-sm-6 col-md-3">
                 <div class="card text-center">
@@ -37,28 +37,28 @@
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="NID" name="nid" class="form-control" autofocus>
-                                            <span class="text-danger"></span>
+                                            <input type="text" placeholder="NID" name="nid" class="form-control" autofocus value="<?php echo $modelOne->Nid ?? "" ?>">
+                                            <span class="text-danger"><?php echo $modelTwo->Nid ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="Name" name="name" class="form-control">
-                                            <span class="text-danger"></span>
+                                            <input type="text" placeholder="Name" name="name" class="form-control" value="<?php echo $modelOne->Name ?? "" ?>">
+                                            <span class="text-danger"><?php echo $modelTwo->Name ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="Lastname" name="lastname" class="form-control">
-                                            <span class="text-danger"></span>
+                                            <input type="text" placeholder="Lastname" name="lastname" class="form-control" value="<?php echo $modelOne->LastName ?? "" ?>">
+                                            <span class="text-danger"><?php echo $modelTwo->LastName ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="Phone" name="phone" class="form-control">
-                                            <span class="text-danger"></span>
+                                            <input type="text" placeholder="Phone" name="phone" class="form-control" value="<?php echo $modelOne->Phone ?? "" ?>">
+                                            <span class="text-danger"><?php echo $modelTwo->Phone ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="email" placeholder="Email" name="email" class="form-control">
-                                            <span class="text-danger"></span>
+                                            <input type="email" placeholder="Email" name="email" class="form-control" value="<?php echo $modelOne->Email ?? "" ?>">
+                                            <span class="text-danger"><?php echo $modelTwo->Email ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="password" placeholder="Password" name="pass" class="form-control">
-                                            <span class="text-danger"></span>
+                                            <input type="password" placeholder="Password" name="pass" class="form-control" value="<?php echo $modelOne->Password ?? "" ?>">
+                                            <span class="text-danger"><?php echo $modelTwo->Password ?? "" ?></span>
                                         </div>
 
                                         <div class="form-group mb-3">
