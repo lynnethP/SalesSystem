@@ -75,6 +75,7 @@
                 //, $_POST['role'],
                 // $_POST['image']
             );
+            var_dump($_POST['password']);
             
             Session::setSession('modelOne', serialize($modelOne));
             Session::setSession('modelTwo', serialize(array(

@@ -57,7 +57,7 @@
                                             <span class="text-danger"><?php echo $modelTwo->Email ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="password" placeholder="Password" name="pass" class="form-control" value="<?php echo $modelOne->Password ?? "" ?>">
+                                            <input type="password" placeholder="Password" name="password" class="form-control" value="<?php echo $modelOne->Password ?? "" ?>">
                                             <span class="text-danger"><?php echo $modelTwo->Password ?? "" ?></span>
                                         </div>
 
