@@ -47,35 +47,35 @@
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="NID" name="nid" class="form-control" autofocus value="<?php echo $modelOne->Nid ?? "" ?>">
-                                            <span class="text-danger"><?php echo $modelTwo->Nid ?? "" ?></span>
+                                            <input type="text" placeholder="NID" name="nid" class="form-control" value="<?php echo $modelOne->Nid ?? "" ?>" onkeypress="new User().ClearMessages(this);" autofocus>
+                                            <span id="nid" class="text-danger"><?php echo $modelTwo->Nid ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="Name" name="name" class="form-control" value="<?php echo $modelOne->Name ?? "" ?>">
-                                            <span class="text-danger"><?php echo $modelTwo->Name ?? "" ?></span>
+                                            <input type="text" placeholder="Name" name="name" class="form-control" value="<?php echo $modelOne->Name ?? "" ?>" onkeypress="new User().ClearMessages(this);">
+                                            <span id="name" class="text-danger"><?php echo $modelTwo->Name ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="Lastname" name="lastname" class="form-control" value="<?php echo $modelOne->LastName ?? "" ?>">
-                                            <span class="text-danger"><?php echo $modelTwo->LastName ?? "" ?></span>
+                                            <input type="text" placeholder="Lastname" name="lastname" class="form-control" value="<?php echo $modelOne->LastName ?? "" ?>" onkeypress="new User().ClearMessages(this);">
+                                            <span id="lastname" class="text-danger"><?php echo $modelTwo->LastName ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="Phone" name="phone" class="form-control" value="<?php echo $modelOne->Phone ?? "" ?>">
-                                            <span class="text-danger"><?php echo $modelTwo->Phone ?? "" ?></span>
+                                            <input type="text" placeholder="Phone" name="phone" class="form-control" value="<?php echo $modelOne->Phone ?? "" ?>" onkeypress="new User().ClearMessages(this);">
+                                            <span id="phone" class="text-danger"><?php echo $modelTwo->Phone ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder="User" name="user" class="form-control" value="<?php echo $modelOne->User ?? "" ?>">
-                                            <span class="text-danger"><?php echo $modelTwo->User ?? "" ?></span>
+                                            <input type="text" placeholder="User" name="user" class="form-control" value="<?php echo $modelOne->User ?? "" ?>" onkeypress="new User().ClearMessages(this);">
+                                            <span id="user" class="text-danger"><?php echo $modelTwo->User ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="email" placeholder="Email" name="email" class="form-control" value="<?php echo $modelOne->Email ?? "" ?>">
-                                            <span class="text-danger"><?php echo $modelTwo->Email ?? "" ?></span>
+                                            <input type="email" placeholder="Email" name="email" class="form-control" value="<?php echo $modelOne->Email ?? "" ?>" onkeypress="new User().ClearMessages(this);">
+                                            <span id="email" class="text-danger"><?php echo $modelTwo->Email ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="password" placeholder="Password" name="password" class="form-control" value="<?php echo $modelOne->Password ?? "" ?>">
-                                            <span class="text-danger"><?php echo $modelTwo->Password ?? "" ?></span>
+                                            <input type="password" placeholder="Password" name="password" class="form-control" value="<?php echo $modelOne->Password ?? "" ?>" onkeypress="new User().ClearMessages(this);">
+                                            <span id="password" class="text-danger"><?php echo $modelTwo->Password ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <select class="form-select" name="role" id="">
+                                            <select onchange="new User().ClearMessages(this);" class="form-select" name="role" id="">
                                                 <?php 
                                                     if ($modelTwo == null) {
                                                         echo '<option value="Seleccione un rol">Seleccione un rol</option>';
@@ -85,7 +85,7 @@
                                                     }
                                                 ?>
                                             </select>
-                                            <span class="text-danger"><?php echo $modelTwo->Role ?? "" ?></span>
+                                            <span id="role" class="text-danger"><?php echo $modelTwo->Role ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
                                             <button type="submit" class="btn btn-primary btn-block">
