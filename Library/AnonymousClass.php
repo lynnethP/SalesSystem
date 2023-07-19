@@ -25,8 +25,8 @@
                         $this->Password = $array[4];
                         $this->Phone = $array[5];
                         $this->User = $array[6];
-                        // $this->Role = $array[7];
-                        // $this->Image = $array[8];
+                        $this->Role = $array[7];
+                        $this->Image = $array[8];
                     }
                 }
             };

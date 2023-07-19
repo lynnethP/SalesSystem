@@ -4,12 +4,22 @@
             <div class="col-sm-6 col-md-3">
                 <div class="card text-center">
                     <output id="imageUser">
-                        <img src="<?php echo URL . RS ?>img/default.png" alt="" class="imageUser">
+                        <img src="<?php 
+                            if ($modelOne != null) {
+                                if ($modelOne->Image != null) {
+                                    echo 'data:image/jpeg;base64,'.$modelOne->Image;
+                                }else {
+                                    echo URL.RS.'img/default.png';
+                                }
+                            }else{
+                                echo URL.RS.'img/default.png';
+                            }
+                        ?>" class="imageUser">
                     </output>
                     <div class="card-body">
                         <div class="caption text-center">
                             <label for="files" class="btn btn-primary">Cargar foto</label>
-                            <input accept="image/*" type="file" id="files">
+                            <input accept="image/*" type="file" name="file" id="files">
                         </div>
                     </div>
                 </div>
@@ -53,6 +63,10 @@
                                             <span class="text-danger"><?php echo $modelTwo->Phone ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
+                                            <input type="text" placeholder="User" name="user" class="form-control" value="<?php echo $modelOne->User ?? "" ?>">
+                                            <span class="text-danger"><?php echo $modelTwo->User ?? "" ?></span>
+                                        </div>
+                                        <div class="form-group mb-3">
                                             <input type="email" placeholder="Email" name="email" class="form-control" value="<?php echo $modelOne->Email ?? "" ?>">
                                             <span class="text-danger"><?php echo $modelTwo->Email ?? "" ?></span>
                                         </div>
@@ -60,14 +74,18 @@
                                             <input type="password" placeholder="Password" name="password" class="form-control" value="<?php echo $modelOne->Password ?? "" ?>">
                                             <span class="text-danger"><?php echo $modelTwo->Password ?? "" ?></span>
                                         </div>
-
                                         <div class="form-group mb-3">
-                                            <select class="form-select" name="" id="">
-                                                <option value="">Dafult Select</option>
-                                                <option value="">One</option>
-                                                <option value="">Two</option>
+                                            <select class="form-select" name="role" id="">
+                                                <?php 
+                                                    if ($modelTwo == null) {
+                                                        echo '<option value="Seleccione un rol">Seleccione un rol</option>';
+                                                    }
+                                                    foreach ($modelThree as $key => $value) {
+                                                        echo '<option>'. $value['role'].'</option>';
+                                                    }
+                                                ?>
                                             </select>
-                                            <!-- <span class="text-danger"></span> -->
+                                            <span class="text-danger"><?php echo $modelTwo->Role ?? "" ?></span>
                                         </div>
                                         <div class="form-group mb-3">
                                             <button type="submit" class="btn btn-primary btn-block">

@@ -20,10 +20,14 @@
             try {
                 $where = $where ?? "";  //si el where contiene un valor nulo se deja en blanco
                 $query = "SELECT ". $attr . " FROM " . $table . $where;
+                // var_dump($query);
                 $sth = $this->pdo->prepare($query);
-                $response = $sth->fetchAll(PDO::FETCH_ASSOC);
+                // var_dump($sth);
                 $sth->execute($param);
+                $response = $sth->fetchAll(PDO::FETCH_ASSOC);
+                // var_dump($response);
                 return array("results" => $response);
+                // var_dump($response['results']);
             } catch (\Throwable $th) {
                 return $th->getMessage();
             }
